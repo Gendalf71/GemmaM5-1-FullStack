@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository_version": "1.1.240",
-  "generated_utc": "2026-07-24T20:00:00Z",
+  "generated_utc": "2026-07-25T13:27:41Z",
   "audit_mode": "clean-room static audit without owner GitHub access",
   "input_release": "1.1.150",
   "terminal_release": "1.1.240",
@@ -12,7 +12,7 @@
     "outer_cycles": 90,
     "domains_per_cycle": 24,
     "total_control_passes": 2160,
-    "state_digest_sha256": "7e43b05960208d5f8a201a20a78300079dc0632fb4c69f094fabe8edc41d77b9"
+    "state_digest_sha256": "2a6c6ccf92ea41149aebb2a6273578425d52d92d478ea05d712e6e373776da44"
   },
   "release_gates": [
     "independent text quality",
