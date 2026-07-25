@@ -379,7 +379,7 @@ def repository_state_digest() -> str:
     digest = hashlib.sha256()
     for path in sorted((p for p in ROOT.rglob("*") if p.is_file()), key=lambda p: p.relative_to(ROOT).as_posix().encode()):
         relative = path.relative_to(ROOT).as_posix()
-        if relative in excluded or "__pycache__" in path.parts or relative.startswith(("dist/", "artifacts/")):
+        if relative in excluded or "__pycache__" in path.parts or relative.startswith(("dist/", "artifacts/", ".git/")) or relative == ".git" or "/.git/" in ("/" + relative + "/"):
             continue
         digest.update(relative.encode("utf-8") + b"\0")
         digest.update(hashlib.sha256(path.read_bytes()).digest())
