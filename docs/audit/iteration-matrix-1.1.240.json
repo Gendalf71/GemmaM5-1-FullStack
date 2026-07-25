@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
   "repository_version": "1.1.240",
-  "generated_utc": "2026-07-25T13:27:20Z",
+  "generated_utc": "2026-07-25T13:35:42Z",
   "outer_cycles": 90,
   "domains_per_cycle": 24,
   "total_control_passes": 2160,
-  "state_digest_sha256": "2a6c6ccf92ea41149aebb2a6273578425d52d92d478ea05d712e6e373776da44",
+  "state_digest_sha256": "0c6d63c5d427b4225d99a9542bdd1941a532f1e620edf29374c67a7054848a55",
   "scope_note": "Cycle 1 executes all full validators. Cycles 2-90 repeat repository-state integrity checks and carry forward the established domain closure; these are not independent human reviews or hardware benchmarks.",
   "passes": [
     {
