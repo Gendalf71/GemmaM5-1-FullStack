@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "repository_version": "1.1.240",
+  "status": "not_captured",
+  "captured_utc": null,
+  "hardware": {
+    "model_identifier": null,
+    "chip": null,
+    "unified_memory_gb": null
+  },
+  "software": {
+    "macos": null,
+    "macos_build": null,
+    "lm_studio": null,
+    "runtime": null
+  },
+  "model": {
+    "model_key": null,
+    "quantization": "q4_0",
+    "context_length": null
+  },
+  "files": [],
+  "redaction_reviewed": null,
+  "notes": "Populate only after direct owner acceptance; generated interfaces are not evidence."
+}

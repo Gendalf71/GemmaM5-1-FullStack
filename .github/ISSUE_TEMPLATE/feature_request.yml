@@ -1,0 +1,29 @@
+name: Feature request
+description: Propose a bounded improvement without broadening the verified runtime claim
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: "Do not include secrets, model weights, private paths or unredacted runtime evidence."
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem and user value
+      description: State the concrete limitation and the observable result sought.
+    validations:
+      required: true
+  - type: textarea
+    id: boundary
+    attributes:
+      label: Safety and assurance boundary
+      description: Explain how loopback, authentication, model identity, evidence and deterministic release gates remain intact.
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Proposed validation
+      description: Name tests, fixtures and owner-only hardware evidence required.
+    validations:
+      required: true

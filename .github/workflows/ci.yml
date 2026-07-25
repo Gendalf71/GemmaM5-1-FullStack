@@ -1,0 +1,43 @@
+name: Static repository checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: gemmam5-static-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  PYTHONDONTWRITEBYTECODE: '1'
+
+jobs:
+  static-checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 1
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.12'
+      - name: Reject whitespace damage
+        run: git diff --check
+      - name: Repository verification
+        run: ./scripts/verify_repo.sh
+      - name: Verify tracked release inventory
+        run: ./scripts/verify_git_inventory.sh --require-clean
+      - name: Build and verify release archive
+        run: ./scripts/build_release.sh --source-already-verified --output-dir "$RUNNER_TEMP"
+      - name: Explain scope
+        run: echo 'Static checks only. This workflow does not load Gemma or benchmark Apple Silicon.'

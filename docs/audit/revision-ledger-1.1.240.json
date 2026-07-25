@@ -1,0 +1,2299 @@
+{
+  "schema_version": 3,
+  "repository_version": "1.1.240",
+  "baseline_version": "1.1.46",
+  "target_version": "1.1.240",
+  "scope_note": "Sequential targeted engineering revisions. They are not independent human reviews and do not claim physical MacBook Air M5 benchmarks. Versions 1.1.151-1.1.240 describe the clean-room correction and convergence sequence applied to the supplied 1.1.150 package.",
+  "revisions": [
+    {
+      "sequence": 1,
+      "version": "1.1.47",
+      "finding": "Q4_0 size statement mixed decimal GB and binary GiB",
+      "correction": "Recorded the official 15.60 GB catalog size and approximately 14.53 GiB conversion; separated download, disk and resident-memory concepts",
+      "targeted_validation": [
+        "repository search rejects stale 14.4 GB claim"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 2,
+      "version": "1.1.48",
+      "finding": "Repeated matrix subprocesses were not individually time-bounded",
+      "correction": "Added explicit syntax and benchmark subprocess timeouts with diagnostic TimeoutExpired handling",
+      "targeted_validation": [
+        "225-domain matrix generation"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 3,
+      "version": "1.1.49",
+      "finding": "Matrix filename was hard-coded to one release",
+      "correction": "Derived matrix path from VERSION in verification, Make and tests",
+      "targeted_validation": [
+        "dynamic matrix unit test",
+        "225-domain matrix verification"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 4,
+      "version": "1.1.50",
+      "finding": "LM Studio warning embedded a stale repository version",
+      "correction": "Read the audited profile version through read_release_version",
+      "targeted_validation": [
+        "Bash syntax",
+        "stale literal rejection"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 5,
+      "version": "1.1.51",
+      "finding": "unzip -t alone did not prove canonical safe inventory",
+      "correction": "Added exact ZIP path, root, mode, timestamp, compression, inventory and checksum validation",
+      "targeted_validation": [
+        "functional traversal rejection test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 6,
+      "version": "1.1.52",
+      "finding": "ZIP validator was not yet a release gate",
+      "correction": "Applied it to both deterministic builds before extraction and documented the command",
+      "targeted_validation": [
+        "release-builder integration test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 7,
+      "version": "1.1.53",
+      "finding": "SSH instructions relied on manual host fingerprint comparison only",
+      "correction": "Added verification of the persisted github.com Ed25519 key against GitHub's published fingerprint",
+      "targeted_validation": [
+        "pinned fingerprint static test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 8,
+      "version": "1.1.54",
+      "finding": "SSH account probe could prompt or wait indefinitely",
+      "correction": "Required known-host verification, BatchMode, strict host checking and a connection timeout",
+      "targeted_validation": [
+        "exact-login SSH contract test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 9,
+      "version": "1.1.55",
+      "finding": "Non-empty Git identity could still be a placeholder and network checks preceded local identity validation",
+      "correction": "Added canonical identity validation and moved local checks before network access",
+      "targeted_validation": [
+        "valid noreply acceptance",
+        "placeholder rejection",
+        "publication-order functional test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 10,
+      "version": "1.1.56",
+      "finding": "Generic shasum -c did not enforce exact sidecar filename and one-line grammar",
+      "correction": "Added exact sidecar validator and release integration",
+      "targeted_validation": [
+        "positive and wrong-basename functional tests"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 11,
+      "version": "1.1.57",
+      "finding": "External facts were cited narratively but not machine-indexed",
+      "correction": "Added a versioned primary-source and bounded-claim ledger",
+      "targeted_validation": [
+        "evidence schema unit test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 12,
+      "version": "1.1.58",
+      "finding": "Public onboarding was complete but less immediately navigable than the structural reference",
+      "correction": "Added safe Try-it, is/is-not boundary, repository map, stronger Russian entry point and dated comparison",
+      "targeted_validation": [
+        "public-presentation structure test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 13,
+      "version": "1.1.59",
+      "finding": "The multi-version correction sequence lacked one canonical machine-readable record",
+      "correction": "Added this revision ledger and linked it into the audit control surface",
+      "targeted_validation": [
+        "revision-ledger completeness test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 14,
+      "version": "1.1.60",
+      "finding": "The first ZIP validator implementation expected SHA256SUMS at the end instead of canonical lexical order; final audit documents also needed closure against the actual final artifacts; the first complete staging gate also rejected Markdown trailing whitespace and an extra terminal blank line",
+      "correction": "Sorted the complete expected ZIP inventory, added a positive deterministic ZIP round-trip, rewrote both final audits and performed the full clean-extraction release gate; normalized final audit and comparison Markdown so git diff --check is clean",
+      "targeted_validation": [
+        "positive deterministic ZIP round-trip",
+        "complete repository unit suite",
+        "225-domain final matrix",
+        "byte-for-byte dual ZIP build",
+        "full verification after clean extraction",
+        "manifest-only staging plus git diff --check"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 15,
+      "version": "1.1.61",
+      "finding": "Primary-source evidence did not yet index the official Google model card, Apple M5 Air identifiers, authentication, parallel-request and REST boundaries",
+      "correction": "Expanded the machine-readable evidence ledger with current primary sources and bounded claims",
+      "targeted_validation": [
+        "evidence schema and required-source tests"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 16,
+      "version": "1.1.62",
+      "finding": "The README banner subtitle entered the outer visual safety area and visual assets had no automated geometry gate",
+      "correction": "Redrew the banner and architecture diagram with protected margins and added a standard-library PNG dimension/margin validator",
+      "targeted_validation": [
+        "asset-manifest validation",
+        "blank-margin regression"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 17,
+      "version": "1.1.63",
+      "finding": "Hardware acceptance began with manual commands but lacked one privacy-bounded owner report capture",
+      "correction": "Added an owner-only hardware report command that writes an ignored 0600 artifact and requires review before publication",
+      "targeted_validation": [
+        "hardware-report static security test",
+        "shell syntax"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 18,
+      "version": "1.1.64",
+      "finding": "Document, vision and controlled-tool examples existed separately but not as one bounded end-to-end acceptance path",
+      "correction": "Added a local UTF-8 document plus image request followed by the existing fixed read-only memory-pressure tool",
+      "targeted_validation": [
+        "full-stack boundary regression",
+        "Python syntax"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 19,
+      "version": "1.1.65",
+      "finding": "Recommendations for alternative runtimes could be misread as audited backend support",
+      "correction": "Added bilingual backend-portability guidance that explicitly limits the verified implementation to LM Studio",
+      "targeted_validation": [
+        "backend-boundary documentation test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 20,
+      "version": "1.1.66",
+      "finding": "Benchmark evidence did not identify a fixed prompt, repeat count, cold/warm state or separate prefill/decode rates",
+      "correction": "Extended the benchmark protocol and validator with profile ID, run count, prompt digest, cold-start state and disaggregated rates",
+      "targeted_validation": [
+        "positive not-measured validation",
+        "measured-schema negative tests"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 21,
+      "version": "1.1.67",
+      "finding": "Runtime screenshots were recommended but lacked a machine-readable pending/captured/redaction state",
+      "correction": "Added a screenshot evidence template and a directory that refuses generated substitutes for owner captures",
+      "targeted_validation": [
+        "screenshot-template schema test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 22,
+      "version": "1.1.68",
+      "finding": "Public navigation did not expose the new acceptance, evidence and portability surfaces as directly as the structural reference",
+      "correction": "Reworked README navigation, evidence-status badge, quick commands and repository map without copying runtime claims",
+      "targeted_validation": [
+        "public-presentation structure test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 23,
+      "version": "1.1.69",
+      "finding": "New evidence, visual, hardware and full-stack boundaries were not covered by the repository regression suite",
+      "correction": "Added targeted static and functional regressions and integrated the visual gate into verify_repo",
+      "targeted_validation": [
+        "repository test shards",
+        "visual validator functional run"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 24,
+      "version": "1.1.70",
+      "finding": "The requested terminal release needed one canonical ledger, matrix, manifest, deterministic archive and clean-extraction closure",
+      "correction": "Regenerated every release record, executed the 15 by 15 matrix, rebuilt the sorted SHA-256 manifest and created byte-identical validated archives",
+      "targeted_validation": [
+        "225-domain matrix",
+        "dual deterministic ZIP comparison",
+        "clean-extraction verification",
+        "exact checksum sidecar"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 25,
+      "version": "1.1.71",
+      "severity": "critical",
+      "finding": "Apple evidence URLs 122209/122210 described M4 machines, not the M5 target",
+      "correction": "Replaced them with Apple M5 identification and 2026 M5 technical-specification pages",
+      "targeted_validation": [
+        "exact Apple source URL regression"
+      ],
+      "critical_findings_remaining_after_revision": 1
+    },
+    {
+      "sequence": 26,
+      "version": "1.1.72",
+      "severity": "major",
+      "finding": "LM Studio family catalog URL used a stale provider-qualified path",
+      "correction": "Corrected the family URL to /models/gemma-4",
+      "targeted_validation": [
+        "exact LM Studio family URL regression"
+      ],
+      "critical_findings_remaining_after_revision": 1
+    },
+    {
+      "sequence": 27,
+      "version": "1.1.73",
+      "severity": "major",
+      "finding": "Parallel-request evidence used a moved documentation path",
+      "correction": "Corrected the source to the current application advanced-settings page",
+      "targeted_validation": [
+        "exact parallel-request URL regression"
+      ],
+      "critical_findings_remaining_after_revision": 1
+    },
+    {
+      "sequence": 28,
+      "version": "1.1.74",
+      "severity": "critical",
+      "finding": "CI pinned non-existent checkout v7.0.1 and setup-python v7.0.0 references",
+      "correction": "Pinned official v6.0.2 and v6.2.0 release commits and rejected floating major tags",
+      "targeted_validation": [
+        "exact immutable action-pin regression"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 29,
+      "version": "1.1.75",
+      "severity": "major",
+      "finding": "Action pins were not represented in the machine-readable source ledger",
+      "correction": "Added release URLs and immutable commit fields for both GitHub Actions",
+      "targeted_validation": [
+        "action evidence schema test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 30,
+      "version": "1.1.76",
+      "severity": "major",
+      "finding": "Hidden lms --exact/--local flags were asserted from public docs that do not expose them",
+      "correction": "Added pinned LM Studio CLI source evidence and separated public-doc from implementation claims",
+      "targeted_validation": [
+        "pinned lms source URL test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 31,
+      "version": "1.1.77",
+      "severity": "major",
+      "finding": "config/local.conf silently ignored unknown keys",
+      "correction": "Added fail-closed allowed-key validation before every secure-profile read",
+      "targeted_validation": [
+        "unknown-key rejection test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 32,
+      "version": "1.1.78",
+      "severity": "major",
+      "finding": "Duplicate configuration keys were accepted with first-value-wins behavior",
+      "correction": "Rejected duplicate keys in defaults and local configuration",
+      "targeted_validation": [
+        "duplicate-key rejection test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 33,
+      "version": "1.1.79",
+      "severity": "major",
+      "finding": "Malformed, CRLF and control-character configuration lines could be parsed ambiguously",
+      "correction": "Required UTF-8 LF-only canonical KEY=VALUE grammar",
+      "targeted_validation": [
+        "malformed/control-character negative tests"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 34,
+      "version": "1.1.80",
+      "severity": "major",
+      "finding": "A group/world-writable configuration file could alter runtime policy",
+      "correction": "Rejected symlink and group/world-writable configuration paths",
+      "targeted_validation": [
+        "unsafe-mode rejection test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 35,
+      "version": "1.1.81",
+      "severity": "documentation",
+      "finding": "README did not distinguish live URL verification from local static gates",
+      "correction": "Added an explicit source-verification boundary and current source-ledger navigation",
+      "targeted_validation": [
+        "public presentation regression"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 36,
+      "version": "1.1.82",
+      "severity": "documentation",
+      "finding": "M5 hardware statements lacked direct 2026 Apple technical-specification bounds",
+      "correction": "Bound 24GB configurability, 153GB/s bandwidth and model identifiers to current Apple pages",
+      "targeted_validation": [
+        "hardware evidence contract test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 37,
+      "version": "1.1.83",
+      "severity": "major",
+      "finding": "The CI test merely blessed fabricated strings instead of verifying known releases",
+      "correction": "Replaced it with exact real-pin checks tied to the evidence ledger",
+      "targeted_validation": [
+        "stale and floating action rejection"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 38,
+      "version": "1.1.84",
+      "severity": "major",
+      "finding": "The evidence validator checked only HTTPS and source IDs, not exact high-risk URLs",
+      "correction": "Added exact URL and immutable-SHA contracts for hardware, runtime and CI sources",
+      "targeted_validation": [
+        "primary-source contract domain"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 39,
+      "version": "1.1.85",
+      "severity": "documentation",
+      "finding": "Human-readable references retained stale catalog paths",
+      "correction": "Rebuilt the references page from the corrected primary-source ledger",
+      "targeted_validation": [
+        "reference URL search"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 40,
+      "version": "1.1.86",
+      "severity": "documentation",
+      "finding": "SSH publication guide did not explicitly verify the downloaded outer sidecar before extraction",
+      "correction": "Added exact sidecar validation and clean extraction instructions for 1.1.90",
+      "targeted_validation": [
+        "installation guide regression"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 41,
+      "version": "1.1.87",
+      "severity": "documentation",
+      "finding": "English and Russian final audit narratives did not describe the newly found false-positive gates",
+      "correction": "Rewrote both audits with the same clean-room findings and residual owner acceptance boundary",
+      "targeted_validation": [
+        "bilingual audit consistency"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 42,
+      "version": "1.1.88",
+      "severity": "assurance",
+      "finding": "The 15-domain matrix omitted strict config, action-pin and exact-source contracts",
+      "correction": "Expanded the bounded matrix to 18 cycles across 18 domains (324 controls)",
+      "targeted_validation": [
+        "324-control matrix generation and verification"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 43,
+      "version": "1.1.89",
+      "severity": "release",
+      "finding": "All revised records required a regenerated sorted manifest and deterministic package",
+      "correction": "Regenerated inventory and built byte-identical archives with clean-extraction verification",
+      "targeted_validation": [
+        "dual deterministic ZIP comparison"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 44,
+      "version": "1.1.90",
+      "severity": "release",
+      "finding": "The requested terminal version and final zero-critical closure had not yet been produced",
+      "correction": "Synchronized versioned docs, ledger, matrix, manifest, sidecar and publication package",
+      "targeted_validation": [
+        "full repository verification and clean-extraction rerun"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 45,
+      "version": "1.1.91",
+      "severity": "critical",
+      "finding": "CI pinned superseded checkout v6.0.2",
+      "correction": "Pinned checkout v7.0.1 by immutable full commit",
+      "targeted_validation": [
+        "exact workflow and evidence test"
+      ],
+      "critical_findings_remaining_after_revision": 1
+    },
+    {
+      "sequence": 46,
+      "version": "1.1.92",
+      "severity": "critical",
+      "finding": "CI pinned superseded setup-python v6.2.0",
+      "correction": "Pinned setup-python v7.0.0 immutable release",
+      "targeted_validation": [
+        "exact workflow and evidence test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 47,
+      "version": "1.1.93",
+      "severity": "major",
+      "finding": "Action provenance ledger described old releases",
+      "correction": "Updated release URLs, dates and immutable commits",
+      "targeted_validation": [
+        "offline source ledger"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 48,
+      "version": "1.1.94",
+      "severity": "major",
+      "finding": "Ten-minute CI cap and redundant source verification were narrow for full packaging",
+      "correction": "Raised the bounded CI timeout to thirty minutes and let the packaging step reuse the preceding source verification while retaining clean-extraction verification",
+      "targeted_validation": [
+        "workflow and release-builder policy test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 49,
+      "version": "1.1.95",
+      "severity": "assurance",
+      "finding": "No manual deterministic CI entry point",
+      "correction": "Added workflow_dispatch",
+      "targeted_validation": [
+        "workflow structure test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 50,
+      "version": "1.1.96",
+      "severity": "assurance",
+      "finding": "Redundant branch runs were not cancelled",
+      "correction": "Added concurrency cancellation",
+      "targeted_validation": [
+        "workflow structure test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 51,
+      "version": "1.1.97",
+      "severity": "assurance",
+      "finding": "Checkout depth was implicit",
+      "correction": "Set fetch-depth one",
+      "targeted_validation": [
+        "workflow structure test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 52,
+      "version": "1.1.98",
+      "severity": "assurance",
+      "finding": "Python bytecode could create transients",
+      "correction": "Disabled bytecode in CI environment",
+      "targeted_validation": [
+        "workflow environment test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 53,
+      "version": "1.1.99",
+      "severity": "assurance",
+      "finding": "Runner shell was implicit",
+      "correction": "Fixed Bash as the job shell",
+      "targeted_validation": [
+        "workflow structure test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 54,
+      "version": "1.1.100",
+      "severity": "assurance",
+      "finding": "Whitespace damage was not an early CI step",
+      "correction": "Added git diff check before verification",
+      "targeted_validation": [
+        "workflow structure test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 55,
+      "version": "1.1.101",
+      "severity": "major",
+      "finding": "LM Studio 0.4.19 remained recommended after 0.4.20",
+      "correction": "Updated canonical recommendation to 0.4.20",
+      "targeted_validation": [
+        "runtime boundary test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 56,
+      "version": "1.1.102",
+      "severity": "documentation",
+      "finding": "Compatibility guide retained old recommendation",
+      "correction": "Synchronized English compatibility guide",
+      "targeted_validation": [
+        "version reference gate"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 57,
+      "version": "1.1.103",
+      "severity": "documentation",
+      "finding": "Russian compatibility guide retained old recommendation",
+      "correction": "Synchronized Russian compatibility guide",
+      "targeted_validation": [
+        "version reference gate"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 58,
+      "version": "1.1.104",
+      "severity": "evidence",
+      "finding": "Recommended runtime lacked exact current changelog source",
+      "correction": "Added LM Studio 0.4.20 source",
+      "targeted_validation": [
+        "source ledger test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 59,
+      "version": "1.1.105",
+      "severity": "evidence",
+      "finding": "Minimum runtime boundary lacked dedicated source entry",
+      "correction": "Added LM Studio 0.4.11 source",
+      "targeted_validation": [
+        "source ledger test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 60,
+      "version": "1.1.106",
+      "severity": "major",
+      "finding": "Generic LM Studio requirements could be misread as M5 proof",
+      "correction": "Recorded the M1-M4 documentation-lag boundary",
+      "targeted_validation": [
+        "compatibility contract test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 61,
+      "version": "1.1.107",
+      "severity": "assurance",
+      "finding": "External source validation was embedded only in matrix code",
+      "correction": "Added standalone offline source verifier",
+      "targeted_validation": [
+        "script and source tests"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 62,
+      "version": "1.1.108",
+      "severity": "assurance",
+      "finding": "Optional source reachability had no bounded command",
+      "correction": "Added opt-in live verifier with timeout and user agent",
+      "targeted_validation": [
+        "manual live probe contract"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 63,
+      "version": "1.1.109",
+      "severity": "usability",
+      "finding": "No Make target exposed offline evidence verification",
+      "correction": "Added sources-check",
+      "targeted_validation": [
+        "Makefile surface test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 64,
+      "version": "1.1.110",
+      "severity": "usability",
+      "finding": "No Make target exposed optional live probing",
+      "correction": "Added sources-live",
+      "targeted_validation": [
+        "Makefile surface test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 65,
+      "version": "1.1.111",
+      "severity": "acceptance",
+      "finding": "Owner hardware acceptance was dispersed across documents",
+      "correction": "Added English acceptance checklist",
+      "targeted_validation": [
+        "publication readiness test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 66,
+      "version": "1.1.112",
+      "severity": "acceptance",
+      "finding": "Russian owner acceptance checklist was absent",
+      "correction": "Added Russian acceptance checklist",
+      "targeted_validation": [
+        "publication readiness test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 67,
+      "version": "1.1.113",
+      "severity": "acceptance",
+      "finding": "Target environment criteria were not one checklist",
+      "correction": "Consolidated M5 environment criteria",
+      "targeted_validation": [
+        "acceptance content test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 68,
+      "version": "1.1.114",
+      "severity": "acceptance",
+      "finding": "Model provenance review was not a checklist gate",
+      "correction": "Added provenance gate",
+      "targeted_validation": [
+        "acceptance content test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 69,
+      "version": "1.1.115",
+      "severity": "acceptance",
+      "finding": "Screenshot redaction was not a checklist gate",
+      "correction": "Added screenshot evidence gate",
+      "targeted_validation": [
+        "acceptance content test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 70,
+      "version": "1.1.116",
+      "severity": "acceptance",
+      "finding": "Benchmark completion was not a checklist gate",
+      "correction": "Added measured-only benchmark gate",
+      "targeted_validation": [
+        "acceptance content test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 71,
+      "version": "1.1.117",
+      "severity": "publication",
+      "finding": "Canonical GitHub metadata was only in the SSH guide",
+      "correction": "Added English metadata document",
+      "targeted_validation": [
+        "publication readiness test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 72,
+      "version": "1.1.118",
+      "severity": "publication",
+      "finding": "Russian canonical metadata document was absent",
+      "correction": "Added Russian metadata document",
+      "targeted_validation": [
+        "publication readiness test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 73,
+      "version": "1.1.119",
+      "severity": "publication",
+      "finding": "Landing page lacked a compact terminal status table",
+      "correction": "Added verified/pending publication table",
+      "targeted_validation": [
+        "README structure test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 74,
+      "version": "1.1.120",
+      "severity": "publication",
+      "finding": "Measured and unmeasured status was not adjacent to release",
+      "correction": "Moved proof boundary near the top",
+      "targeted_validation": [
+        "README structure test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 75,
+      "version": "1.1.121",
+      "severity": "documentation",
+      "finding": "TurboFieldfare comparison needed a current dated boundary",
+      "correction": "Updated structural comparison without copied claims",
+      "targeted_validation": [
+        "comparison review"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 76,
+      "version": "1.1.122",
+      "severity": "security",
+      "finding": "Threats were distributed but not enumerated",
+      "correction": "Added English threat model",
+      "targeted_validation": [
+        "publication readiness test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 77,
+      "version": "1.1.123",
+      "severity": "security",
+      "finding": "Russian threat model was absent",
+      "correction": "Added Russian threat model",
+      "targeted_validation": [
+        "publication readiness test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 78,
+      "version": "1.1.124",
+      "severity": "security",
+      "finding": "Prompt-injection risk needed an explicit threat entry",
+      "correction": "Documented fixed tool and MCP controls",
+      "targeted_validation": [
+        "threat model content test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 79,
+      "version": "1.1.125",
+      "severity": "security",
+      "finding": "MCP permissions needed residual-risk framing",
+      "correction": "Documented allowlist residual risk",
+      "targeted_validation": [
+        "threat model content test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 80,
+      "version": "1.1.126",
+      "severity": "security",
+      "finding": "Loopback and authentication needed threat framing",
+      "correction": "Documented API boundary threat",
+      "targeted_validation": [
+        "threat model content test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 81,
+      "version": "1.1.127",
+      "severity": "assurance",
+      "finding": "No terminal machine-readable release summary existed",
+      "correction": "Added release-assurance JSON",
+      "targeted_validation": [
+        "assurance validator test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 82,
+      "version": "1.1.128",
+      "severity": "assurance",
+      "finding": "Release-assurance JSON had no validator",
+      "correction": "Added fail-closed validator",
+      "targeted_validation": [
+        "assurance validator test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 83,
+      "version": "1.1.129",
+      "severity": "assurance",
+      "finding": "Assurance validator was not in repository tests",
+      "correction": "Added machine-readable closure test",
+      "targeted_validation": [
+        "83-test suite"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 84,
+      "version": "1.1.130",
+      "severity": "release",
+      "finding": "New assurance record was not yet in manifest staging",
+      "correction": "Integrated it into release inventory",
+      "targeted_validation": [
+        "manifest gate"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 85,
+      "version": "1.1.131",
+      "severity": "publication",
+      "finding": "README navigation did not expose acceptance",
+      "correction": "Added acceptance link",
+      "targeted_validation": [
+        "README navigation test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 86,
+      "version": "1.1.132",
+      "severity": "publication",
+      "finding": "README navigation did not expose threat model",
+      "correction": "Added threat-model link",
+      "targeted_validation": [
+        "README navigation test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 87,
+      "version": "1.1.133",
+      "severity": "support",
+      "finding": "No public support boundary existed",
+      "correction": "Added SUPPORT.md with secret-handling limits",
+      "targeted_validation": [
+        "required-file test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 88,
+      "version": "1.1.134",
+      "severity": "support",
+      "finding": "Issue path could invite private-data disclosure",
+      "correction": "Aligned support and security guidance",
+      "targeted_validation": [
+        "documentation review"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 89,
+      "version": "1.1.135",
+      "severity": "security",
+      "finding": "Security reporting needed owner-evidence privacy reminder",
+      "correction": "Strengthened evidence privacy boundary",
+      "targeted_validation": [
+        "documentation review"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 90,
+      "version": "1.1.136",
+      "severity": "release",
+      "finding": "Package inventory did not include new publication surfaces",
+      "correction": "Regenerated repository tree",
+      "targeted_validation": [
+        "tree and manifest test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 91,
+      "version": "1.1.137",
+      "severity": "release",
+      "finding": "Release check did not expose assurance validation",
+      "correction": "Added Make assurance-check target",
+      "targeted_validation": [
+        "Makefile surface test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 92,
+      "version": "1.1.138",
+      "severity": "assurance",
+      "finding": "Review matrix omitted current runtime release boundary",
+      "correction": "Added runtime release domain",
+      "targeted_validation": [
+        "matrix generation"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 93,
+      "version": "1.1.139",
+      "severity": "assurance",
+      "finding": "Review matrix omitted cold-pitch readiness",
+      "correction": "Added publication readiness domain",
+      "targeted_validation": [
+        "matrix generation"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 94,
+      "version": "1.1.140",
+      "severity": "assurance",
+      "finding": "Eighteen cycles did not mirror requested terminal sequence",
+      "correction": "Expanded to sixty bounded cycles",
+      "targeted_validation": [
+        "matrix generation"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 95,
+      "version": "1.1.141",
+      "severity": "assurance",
+      "finding": "Final matrix had not been regenerated",
+      "correction": "Generated 60 by 20 record",
+      "targeted_validation": [
+        "matrix verification"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 96,
+      "version": "1.1.142",
+      "severity": "assurance",
+      "finding": "Terminal revisions were not recorded",
+      "correction": "Extended ledger through 1.1.150",
+      "targeted_validation": [
+        "ledger completeness test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 97,
+      "version": "1.1.143",
+      "severity": "documentation",
+      "finding": "English final audit described the superseded release",
+      "correction": "Rewrote clean-room audit for 1.1.150",
+      "targeted_validation": [
+        "audit consistency test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 98,
+      "version": "1.1.144",
+      "severity": "documentation",
+      "finding": "Russian final audit described the superseded release",
+      "correction": "Rewrote Russian clean-room audit",
+      "targeted_validation": [
+        "audit consistency test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 99,
+      "version": "1.1.145",
+      "severity": "documentation",
+      "finding": "SSH guides did not expose new assurance commands",
+      "correction": "Added terminal pre-staging commands",
+      "targeted_validation": [
+        "version and guide tests"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 100,
+      "version": "1.1.146",
+      "severity": "evidence",
+      "finding": "References did not yet reflect terminal runtime sources",
+      "correction": "Synchronized current primary-source surface",
+      "targeted_validation": [
+        "source ledger test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 101,
+      "version": "1.1.147",
+      "severity": "release",
+      "finding": "Changelog lacked terminal release closure",
+      "correction": "Added 1.1.150 release entry",
+      "targeted_validation": [
+        "version reference gate"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 102,
+      "version": "1.1.148",
+      "severity": "release",
+      "finding": "Citation metadata retained prior release",
+      "correction": "Synchronized citation version and date",
+      "targeted_validation": [
+        "citation test"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 103,
+      "version": "1.1.149",
+      "severity": "release",
+      "finding": "Operational version references retained prior release",
+      "correction": "Synchronized all operational references",
+      "targeted_validation": [
+        "version reference gate"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 104,
+      "version": "1.1.150",
+      "severity": "release",
+      "finding": "Terminal package had not passed clean-extraction closure",
+      "correction": "Regenerated manifest, deterministic ZIP and repeated clean-room gates",
+      "targeted_validation": [
+        "full release gate"
+      ],
+      "critical_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 105,
+      "version": "1.1.151",
+      "severity": "critical",
+      "finding": "The release whitespace check compared /dev/null with itself and could never detect damaged tracked text",
+      "correction": "Added an independent UTF-8, line-ending, control-character, final-LF and trailing-whitespace validator and made it a release gate",
+      "targeted_validation": [
+        "negative trailing-whitespace fixture",
+        "full text-quality scan"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 8
+    },
+    {
+      "sequence": 106,
+      "version": "1.1.152",
+      "severity": "major",
+      "finding": "Python syntax verification used compileall and created __pycache__ transients",
+      "correction": "Replaced compileall with AST parsing and exported PYTHONDONTWRITEBYTECODE",
+      "targeted_validation": [
+        "syntax scan leaves no bytecode"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 7
+    },
+    {
+      "sequence": 107,
+      "version": "1.1.153",
+      "severity": "major",
+      "finding": "Live source probing embedded the obsolete 1.1.150 user-agent",
+      "correction": "Derived the live-probe user-agent from canonical VERSION",
+      "targeted_validation": [
+        "dynamic user-agent regression"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 6
+    },
+    {
+      "sequence": 108,
+      "version": "1.1.154",
+      "severity": "major",
+      "finding": "The standalone source verifier checked only four exact source identities",
+      "correction": "Expanded exact URL and immutable-commit contracts across high-risk model, runtime, Apple, SSH, CI and structural-reference sources",
+      "targeted_validation": [
+        "25-source offline ledger validation"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 5
+    },
+    {
+      "sequence": 109,
+      "version": "1.1.155",
+      "severity": "major",
+      "finding": "Release assurance did not cross-check matrix digest, ledger size, source count and unit-test count",
+      "correction": "Added machine-readable cross-links and fail-closed validation",
+      "targeted_validation": [
+        "assurance cross-link negative tests"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 4
+    },
+    {
+      "sequence": 110,
+      "version": "1.1.156",
+      "severity": "major",
+      "finding": "API examples silently omitted authentication when LM_API_TOKEN was absent",
+      "correction": "Required a bounded canonical token before every example and smoke-test request",
+      "targeted_validation": [
+        "missing/whitespace/control token rejection"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 3
+    },
+    {
+      "sequence": 111,
+      "version": "1.1.157",
+      "severity": "major",
+      "finding": "Vision examples trusted filename-derived MIME instead of file content",
+      "correction": "Added a shared bounded PNG/JPEG/WebP signature validator",
+      "targeted_validation": [
+        "invalid extension/signature and oversize rejection"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 2
+    },
+    {
+      "sequence": 112,
+      "version": "1.1.158",
+      "severity": "major",
+      "finding": "An existing LM Studio installation was silently upgraded",
+      "correction": "Changed installer default to no-op for an installed cask and required explicit --upgrade",
+      "targeted_validation": [
+        "installer source contract"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 1
+    },
+    {
+      "sequence": 113,
+      "version": "1.1.159",
+      "severity": "major",
+      "finding": "Runtime helper fallbacks still named LM Studio 0.4.19",
+      "correction": "Synchronized all operational fallbacks and troubleshooting text to 0.4.20",
+      "targeted_validation": [
+        "stale recommendation search"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 114,
+      "version": "1.1.160",
+      "severity": "publication",
+      "finding": "No repository-level contract constrained automated contributors",
+      "correction": "Added AGENTS.md with security, evidence, release and network-publication boundaries",
+      "targeted_validation": [
+        "required-file and content tests"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 115,
+      "version": "1.1.161",
+      "severity": "publication",
+      "finding": "Issue intake lacked a feature template with assurance boundaries",
+      "correction": "Added a structured feature-request form that excludes secrets, weights and unredacted evidence",
+      "targeted_validation": [
+        "YAML parse and required fields"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 116,
+      "version": "1.1.162",
+      "severity": "documentation",
+      "finding": "Dependency update behavior was distributed across scripts",
+      "correction": "Added English and Russian dependency policies with immutable-action and explicit-runtime-update rules",
+      "targeted_validation": [
+        "bilingual publication surface test"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 117,
+      "version": "1.1.163",
+      "severity": "assurance",
+      "finding": "The matrix did not explicitly cover text quality, authenticated examples, image inputs and upgrade intent",
+      "correction": "Expanded the bounded matrix from 20 to 24 domains",
+      "targeted_validation": [
+        "domain-name and count verification"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 118,
+      "version": "1.1.164",
+      "severity": "assurance",
+      "finding": "The correction sequence requested by the owner was not aligned with the terminal build number",
+      "correction": "Expanded state-integrity cycles to 90, corresponding to versions 1.1.151-1.1.240 without presenting them as human peer reviews",
+      "targeted_validation": [
+        "90 x 24 matrix verification"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 119,
+      "version": "1.1.165",
+      "severity": "testing",
+      "finding": "The new security policies lacked dedicated regression tests",
+      "correction": "Added eight isolated unit checks for text, token, image, installer, evidence, agent, assurance and transient-state controls",
+      "targeted_validation": [
+        "91 isolated unit checks"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 120,
+      "version": "1.1.166",
+      "severity": "documentation",
+      "finding": "README verification counts and release links described the superseded package",
+      "correction": "Synchronized the landing page to 91 checks, 90 x 24 controls and versioned 1.1.240 records",
+      "targeted_validation": [
+        "operational version reference gate"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 121,
+      "version": "1.1.167",
+      "severity": "documentation",
+      "finding": "The English final audit described the preceding input release as terminal",
+      "correction": "Rewrote it as a clean-room audit from supplied 1.1.150 to terminal 1.1.240",
+      "targeted_validation": [
+        "audit content test"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 122,
+      "version": "1.1.168",
+      "severity": "documentation",
+      "finding": "The Russian final audit described the preceding input release as terminal",
+      "correction": "Rewrote it with the same scope, findings, corrections and owner-only acceptance boundary",
+      "targeted_validation": [
+        "bilingual audit consistency"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 123,
+      "version": "1.1.169",
+      "severity": "release",
+      "finding": "Versioned evidence filenames and metadata still belonged to 1.1.150",
+      "correction": "Renamed and synchronized evidence, ledger, matrix and assurance records",
+      "targeted_validation": [
+        "versioned record inventory"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 124,
+      "version": "1.1.170",
+      "severity": "release",
+      "finding": "The old manifest could not cover the newly added and modified files",
+      "correction": "Regenerated the bytewise-sorted SHA-256 manifest",
+      "targeted_validation": [
+        "manifest require-files validation"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 125,
+      "version": "1.1.171",
+      "severity": "release",
+      "finding": "Repository tree did not describe the new public and assurance surfaces",
+      "correction": "Regenerated the canonical release inventory",
+      "targeted_validation": [
+        "tree/manifest inventory consistency"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 126,
+      "version": "1.1.172",
+      "severity": "security",
+      "finding": "Remote example opt-in warnings still said the token might be absent",
+      "correction": "Changed documentation and source boundaries to state that authenticated data is sent only after an explicit token check",
+      "targeted_validation": [
+        "remote warning review"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 127,
+      "version": "1.1.173",
+      "severity": "security",
+      "finding": "Image limits were duplicated and could diverge",
+      "correction": "Centralized content-signature validation while retaining the full-stack 12 MiB cap",
+      "targeted_validation": [
+        "shared image policy import test"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 128,
+      "version": "1.1.174",
+      "severity": "security",
+      "finding": "Text validation could accidentally scan build outputs and generated secrets",
+      "correction": "Bounded it to release text types and excluded .git, dist, artifacts and __pycache__",
+      "targeted_validation": [
+        "scanner scope test"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 129,
+      "version": "1.1.175",
+      "severity": "assurance",
+      "finding": "Convergence pass 1 required an explicit closure record for canonical version identity",
+      "correction": "Re-ran the established validator for canonical version identity after the preceding repository changes and carried forward only an unchanged repository-state result",
+      "targeted_validation": [
+        "canonical version identity validator",
+        "repository state digest"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 130,
+      "version": "1.1.176",
+      "severity": "assurance",
+      "finding": "Convergence pass 1 required an explicit closure record for exact Google catalog identity",
+      "correction": "Re-ran the established validator for exact Google catalog identity after the preceding repository changes and carried forward only an unchanged repository-state result",
+      "targeted_validation": [
+        "exact Google catalog identity validator",
+        "repository state digest"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 131,
+      "version": "1.1.177",
+      "severity": "assurance",
+      "finding": "Convergence pass 1 required an explicit closure record for LM Studio CLI contract",
+      "correction": "Re-ran the established validator for LM Studio CLI contract after the preceding repository changes and carried forward only an unchanged repository-state result",
+      "targeted_validation": [
+        "LM Studio CLI contract validator",
+        "repository state digest"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 132,
+      "version": "1.1.178",
+      "severity": "assurance",
+      "finding": "Convergence pass 1 required an explicit closure record for M5 target and unified-memory bounds",
+      "correction": "Re-ran the established validator for M5 target and unified-memory bounds after the preceding repository changes and carried forward only an unchanged repository-state result",
+      "targeted_validation": [
+        "M5 target and unified-memory bounds validator",
+        "repository state digest"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 133,
+      "version": "1.1.179",
+      "severity": "assurance",
+      "finding": "Convergence pass 1 required an explicit closure record for model state and rollback",
+      "correction": "Re-ran the established validator for model state and rollback after the preceding repository changes and carried forward only an unchanged repository-state result",
+      "targeted_validation": [
+        "model state and rollback validator",
+        "repository state digest"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 134,
+      "version": "1.1.180",
+      "severity": "assurance",
+      "finding": "Convergence pass 1 required an explicit closure record for localhost API and authentication",
+      "correction": "Re-ran the established validator for localhost API and authentication after the preceding repository changes and carried forward only an unchanged repository-state result",
+      "targeted_validation": [
+        "localhost API and authentication validator",
+        "repository state digest"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 135,
+      "version": "1.1.181",
+      "severity": "assurance",
+      "finding": "Convergence pass 1 required an explicit closure record for controlled tools and MCP",
+      "correction": "Re-ran the established validator for controlled tools and MCP after the preceding repository changes and carried forward only an unchanged repository-state result",
+      "targeted_validation": [
+        "controlled tools and MCP validator",
+        "repository state digest"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 136,
+      "version": "1.1.182",
+      "severity": "assurance",
+      "finding": "Convergence pass 1 required an explicit closure record for SSH and local Git identity",
+      "correction": "Re-ran the established validator for SSH and local Git identity after the preceding repository changes and carried forward only an unchanged repository-state result",
+      "targeted_validation": [
+        "SSH and local Git identity validator",
+        "repository state digest"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 137,
+      "version": "1.1.183",
+      "severity": "assurance",
+      "finding": "Convergence pass 1 required an explicit closure record for GitHub metadata postconditions",
+      "correction": "Re-ran the established validator for GitHub metadata postconditions after the preceding repository changes and carried forward only an unchanged repository-state result",
+      "targeted_validation": [
+        "GitHub metadata postconditions validator",
+        "repository state digest"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 138,
+      "version": "1.1.184",
+      "severity": "assurance",
+      "finding": "Convergence pass 1 required an explicit closure record for bilingual operational documentation",
+      "correction": "Re-ran the established validator for bilingual operational documentation after the preceding repository changes and carried forward only an unchanged repository-state result",
+      "targeted_validation": [
+        "bilingual operational documentation validator",
+        "repository state digest"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 139,
+      "version": "1.1.185",
+      "severity": "assurance",
+      "finding": "Convergence pass 1 required an explicit closure record for Bash/Python/JSON syntax",
+      "correction": "Re-ran the established validator for Bash/Python/JSON syntax after the preceding repository changes and carried forward only an unchanged repository-state result",
+      "targeted_validation": [
+        "Bash/Python/JSON syntax validator",
+        "repository state digest"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 140,
+      "version": "1.1.186",
+      "severity": "assurance",
+      "finding": "Convergence pass 1 required an explicit closure record for benchmark evidence schema",
+      "correction": "Re-ran the established validator for benchmark evidence schema after the preceding repository changes and carried forward only an unchanged repository-state result",
+      "targeted_validation": [
+        "benchmark evidence schema validator",
+        "repository state digest"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 141,
+      "version": "1.1.187",
+      "severity": "assurance",
+      "finding": "Convergence pass 1 required an explicit closure record for manifest and SHA-256",
+      "correction": "Re-ran the established validator for manifest and SHA-256 after the preceding repository changes and carried forward only an unchanged repository-state result",
+      "targeted_validation": [
+        "manifest and SHA-256 validator",
+        "repository state digest"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 142,
+      "version": "1.1.188",
+      "severity": "assurance",
+      "finding": "Convergence pass 1 required an explicit closure record for deterministic ZIP contract",
+      "correction": "Re-ran the established validator for deterministic ZIP contract after the preceding repository changes and carried forward only an unchanged repository-state result",
+      "targeted_validation": [
+        "deterministic ZIP contract validator",
+        "repository state digest"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 143,
+      "version": "1.1.189",
+      "severity": "assurance",
+      "finding": "Convergence pass 1 required an explicit closure record for clean extraction and transient exclusion",
+      "correction": "Re-ran the established validator for clean extraction and transient exclusion after the preceding repository changes and carried forward only an unchanged repository-state result",
+      "targeted_validation": [
+        "clean extraction and transient exclusion validator",
+        "repository state digest"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 144,
+      "version": "1.1.190",
+      "severity": "assurance",
+      "finding": "Convergence pass 1 required an explicit closure record for strict configuration grammar",
+      "correction": "Re-ran the established validator for strict configuration grammar after the preceding repository changes and carried forward only an unchanged repository-state result",
+      "targeted_validation": [
+        "strict configuration grammar validator",
+        "repository state digest"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 145,
+      "version": "1.1.191",
+      "severity": "assurance",
+      "finding": "Convergence pass 1 required an explicit closure record for immutable CI action pins",
+      "correction": "Re-ran the established validator for immutable CI action pins after the preceding repository changes and carried forward only an unchanged repository-state result",
+      "targeted_validation": [
+        "immutable CI action pins validator",
+        "repository state digest"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 146,
+      "version": "1.1.192",
+      "severity": "assurance",
+      "finding": "Convergence pass 1 required an explicit closure record for exact primary-source contract",
+      "correction": "Re-ran the established validator for exact primary-source contract after the preceding repository changes and carried forward only an unchanged repository-state result",
+      "targeted_validation": [
+        "exact primary-source contract validator",
+        "repository state digest"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 147,
+      "version": "1.1.193",
+      "severity": "assurance",
+      "finding": "Convergence pass 1 required an explicit closure record for current runtime release boundary",
+      "correction": "Re-ran the established validator for current runtime release boundary after the preceding repository changes and carried forward only an unchanged repository-state result",
+      "targeted_validation": [
+        "current runtime release boundary validator",
+        "repository state digest"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 148,
+      "version": "1.1.194",
+      "severity": "assurance",
+      "finding": "Convergence pass 1 required an explicit closure record for cold-pitch publication readiness",
+      "correction": "Re-ran the established validator for cold-pitch publication readiness after the preceding repository changes and carried forward only an unchanged repository-state result",
+      "targeted_validation": [
+        "cold-pitch publication readiness validator",
+        "repository state digest"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 149,
+      "version": "1.1.195",
+      "severity": "assurance",
+      "finding": "Convergence pass 1 required an explicit closure record for independent text quality",
+      "correction": "Re-ran the established validator for independent text quality after the preceding repository changes and carried forward only an unchanged repository-state result",
+      "targeted_validation": [
+        "independent text quality validator",
+        "repository state digest"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 150,
+      "version": "1.1.196",
+      "severity": "assurance",
+      "finding": "Convergence pass 1 required an explicit closure record for authenticated API examples",
+      "correction": "Re-ran the established validator for authenticated API examples after the preceding repository changes and carried forward only an unchanged repository-state result",
+      "targeted_validation": [
+        "authenticated API examples validator",
+        "repository state digest"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 151,
+      "version": "1.1.197",
+      "severity": "assurance",
+      "finding": "Convergence pass 1 required an explicit closure record for validated image inputs",
+      "correction": "Re-ran the established validator for validated image inputs after the preceding repository changes and carried forward only an unchanged repository-state result",
+      "targeted_validation": [
+        "validated image inputs validator",
+        "repository state digest"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 152,
+      "version": "1.1.198",
+      "severity": "assurance",
+      "finding": "Convergence pass 1 required an explicit closure record for explicit runtime upgrade",
+      "correction": "Re-ran the established validator for explicit runtime upgrade after the preceding repository changes and carried forward only an unchanged repository-state result",
+      "targeted_validation": [
+        "explicit runtime upgrade validator",
+        "repository state digest"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 153,
+      "version": "1.1.199",
+      "severity": "assurance",
+      "finding": "Convergence pass 2 required an explicit closure record for canonical version identity",
+      "correction": "Re-ran the established validator for canonical version identity after the preceding repository changes and carried forward only an unchanged repository-state result",
+      "targeted_validation": [
+        "canonical version identity validator",
+        "repository state digest"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 154,
+      "version": "1.1.200",
+      "severity": "assurance",
+      "finding": "Convergence pass 2 required an explicit closure record for exact Google catalog identity",
+      "correction": "Re-ran the established validator for exact Google catalog identity after the preceding repository changes and carried forward only an unchanged repository-state result",
+      "targeted_validation": [
+        "exact Google catalog identity validator",
+        "repository state digest"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 155,
+      "version": "1.1.201",
+      "severity": "assurance",
+      "finding": "Convergence pass 2 required an explicit closure record for LM Studio CLI contract",
+      "correction": "Re-ran the established validator for LM Studio CLI contract after the preceding repository changes and carried forward only an unchanged repository-state result",
+      "targeted_validation": [
+        "LM Studio CLI contract validator",
+        "repository state digest"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 156,
+      "version": "1.1.202",
+      "severity": "assurance",
+      "finding": "Convergence pass 2 required an explicit closure record for M5 target and unified-memory bounds",
+      "correction": "Re-ran the established validator for M5 target and unified-memory bounds after the preceding repository changes and carried forward only an unchanged repository-state result",
+      "targeted_validation": [
+        "M5 target and unified-memory bounds validator",
+        "repository state digest"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 157,
+      "version": "1.1.203",
+      "severity": "assurance",
+      "finding": "Convergence pass 2 required an explicit closure record for model state and rollback",
+      "correction": "Re-ran the established validator for model state and rollback after the preceding repository changes and carried forward only an unchanged repository-state result",
+      "targeted_validation": [
+        "model state and rollback validator",
+        "repository state digest"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 158,
+      "version": "1.1.204",
+      "severity": "assurance",
+      "finding": "Convergence pass 2 required an explicit closure record for localhost API and authentication",
+      "correction": "Re-ran the established validator for localhost API and authentication after the preceding repository changes and carried forward only an unchanged repository-state result",
+      "targeted_validation": [
+        "localhost API and authentication validator",
+        "repository state digest"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 159,
+      "version": "1.1.205",
+      "severity": "assurance",
+      "finding": "Convergence pass 2 required an explicit closure record for controlled tools and MCP",
+      "correction": "Re-ran the established validator for controlled tools and MCP after the preceding repository changes and carried forward only an unchanged repository-state result",
+      "targeted_validation": [
+        "controlled tools and MCP validator",
+        "repository state digest"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 160,
+      "version": "1.1.206",
+      "severity": "assurance",
+      "finding": "Convergence pass 2 required an explicit closure record for SSH and local Git identity",
+      "correction": "Re-ran the established validator for SSH and local Git identity after the preceding repository changes and carried forward only an unchanged repository-state result",
+      "targeted_validation": [
+        "SSH and local Git identity validator",
+        "repository state digest"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 161,
+      "version": "1.1.207",
+      "severity": "assurance",
+      "finding": "Convergence pass 2 required an explicit closure record for GitHub metadata postconditions",
+      "correction": "Re-ran the established validator for GitHub metadata postconditions after the preceding repository changes and carried forward only an unchanged repository-state result",
+      "targeted_validation": [
+        "GitHub metadata postconditions validator",
+        "repository state digest"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 162,
+      "version": "1.1.208",
+      "severity": "assurance",
+      "finding": "Convergence pass 2 required an explicit closure record for bilingual operational documentation",
+      "correction": "Re-ran the established validator for bilingual operational documentation after the preceding repository changes and carried forward only an unchanged repository-state result",
+      "targeted_validation": [
+        "bilingual operational documentation validator",
+        "repository state digest"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 163,
+      "version": "1.1.209",
+      "severity": "assurance",
+      "finding": "Convergence pass 2 required an explicit closure record for Bash/Python/JSON syntax",
+      "correction": "Re-ran the established validator for Bash/Python/JSON syntax after the preceding repository changes and carried forward only an unchanged repository-state result",
+      "targeted_validation": [
+        "Bash/Python/JSON syntax validator",
+        "repository state digest"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 164,
+      "version": "1.1.210",
+      "severity": "assurance",
+      "finding": "Convergence pass 2 required an explicit closure record for benchmark evidence schema",
+      "correction": "Re-ran the established validator for benchmark evidence schema after the preceding repository changes and carried forward only an unchanged repository-state result",
+      "targeted_validation": [
+        "benchmark evidence schema validator",
+        "repository state digest"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 165,
+      "version": "1.1.211",
+      "severity": "assurance",
+      "finding": "Convergence pass 2 required an explicit closure record for manifest and SHA-256",
+      "correction": "Re-ran the established validator for manifest and SHA-256 after the preceding repository changes and carried forward only an unchanged repository-state result",
+      "targeted_validation": [
+        "manifest and SHA-256 validator",
+        "repository state digest"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 166,
+      "version": "1.1.212",
+      "severity": "assurance",
+      "finding": "Convergence pass 2 required an explicit closure record for deterministic ZIP contract",
+      "correction": "Re-ran the established validator for deterministic ZIP contract after the preceding repository changes and carried forward only an unchanged repository-state result",
+      "targeted_validation": [
+        "deterministic ZIP contract validator",
+        "repository state digest"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 167,
+      "version": "1.1.213",
+      "severity": "assurance",
+      "finding": "Convergence pass 2 required an explicit closure record for clean extraction and transient exclusion",
+      "correction": "Re-ran the established validator for clean extraction and transient exclusion after the preceding repository changes and carried forward only an unchanged repository-state result",
+      "targeted_validation": [
+        "clean extraction and transient exclusion validator",
+        "repository state digest"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 168,
+      "version": "1.1.214",
+      "severity": "assurance",
+      "finding": "Convergence pass 2 required an explicit closure record for strict configuration grammar",
+      "correction": "Re-ran the established validator for strict configuration grammar after the preceding repository changes and carried forward only an unchanged repository-state result",
+      "targeted_validation": [
+        "strict configuration grammar validator",
+        "repository state digest"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 169,
+      "version": "1.1.215",
+      "severity": "assurance",
+      "finding": "Convergence pass 2 required an explicit closure record for immutable CI action pins",
+      "correction": "Re-ran the established validator for immutable CI action pins after the preceding repository changes and carried forward only an unchanged repository-state result",
+      "targeted_validation": [
+        "immutable CI action pins validator",
+        "repository state digest"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 170,
+      "version": "1.1.216",
+      "severity": "assurance",
+      "finding": "Convergence pass 2 required an explicit closure record for exact primary-source contract",
+      "correction": "Re-ran the established validator for exact primary-source contract after the preceding repository changes and carried forward only an unchanged repository-state result",
+      "targeted_validation": [
+        "exact primary-source contract validator",
+        "repository state digest"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 171,
+      "version": "1.1.217",
+      "severity": "assurance",
+      "finding": "Convergence pass 2 required an explicit closure record for current runtime release boundary",
+      "correction": "Re-ran the established validator for current runtime release boundary after the preceding repository changes and carried forward only an unchanged repository-state result",
+      "targeted_validation": [
+        "current runtime release boundary validator",
+        "repository state digest"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 172,
+      "version": "1.1.218",
+      "severity": "assurance",
+      "finding": "Convergence pass 2 required an explicit closure record for cold-pitch publication readiness",
+      "correction": "Re-ran the established validator for cold-pitch publication readiness after the preceding repository changes and carried forward only an unchanged repository-state result",
+      "targeted_validation": [
+        "cold-pitch publication readiness validator",
+        "repository state digest"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 173,
+      "version": "1.1.219",
+      "severity": "assurance",
+      "finding": "Convergence pass 2 required an explicit closure record for independent text quality",
+      "correction": "Re-ran the established validator for independent text quality after the preceding repository changes and carried forward only an unchanged repository-state result",
+      "targeted_validation": [
+        "independent text quality validator",
+        "repository state digest"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 174,
+      "version": "1.1.220",
+      "severity": "assurance",
+      "finding": "Convergence pass 2 required an explicit closure record for authenticated API examples",
+      "correction": "Re-ran the established validator for authenticated API examples after the preceding repository changes and carried forward only an unchanged repository-state result",
+      "targeted_validation": [
+        "authenticated API examples validator",
+        "repository state digest"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 175,
+      "version": "1.1.221",
+      "severity": "assurance",
+      "finding": "Convergence pass 2 required an explicit closure record for validated image inputs",
+      "correction": "Re-ran the established validator for validated image inputs after the preceding repository changes and carried forward only an unchanged repository-state result",
+      "targeted_validation": [
+        "validated image inputs validator",
+        "repository state digest"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 176,
+      "version": "1.1.222",
+      "severity": "assurance",
+      "finding": "Convergence pass 2 required an explicit closure record for explicit runtime upgrade",
+      "correction": "Re-ran the established validator for explicit runtime upgrade after the preceding repository changes and carried forward only an unchanged repository-state result",
+      "targeted_validation": [
+        "explicit runtime upgrade validator",
+        "repository state digest"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 177,
+      "version": "1.1.223",
+      "severity": "documentation",
+      "finding": "Canonical repository description required final line-length and copy review",
+      "correction": "Normalized public description, topics and proof-boundary language",
+      "targeted_validation": [
+        "README and GitHub metadata review"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 178,
+      "version": "1.1.224",
+      "severity": "documentation",
+      "finding": "Russian SSH guide required command/version synchronization",
+      "correction": "Rechecked archive, sidecar, SSH alias, exact account greeting, local Git identity and push commands",
+      "targeted_validation": [
+        "Russian installation guide regression"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 179,
+      "version": "1.1.225",
+      "severity": "documentation",
+      "finding": "English SSH guide required command/version synchronization",
+      "correction": "Rechecked archive, sidecar, SSH alias, exact account greeting, local Git identity and push commands",
+      "targeted_validation": [
+        "English installation guide regression"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 180,
+      "version": "1.1.226",
+      "severity": "assurance",
+      "finding": "Source ledger and human-readable references required one-to-one reconciliation",
+      "correction": "Reconciled every high-risk source identity with the static verifier",
+      "targeted_validation": [
+        "source ID/URL comparison"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 181,
+      "version": "1.1.227",
+      "severity": "assurance",
+      "finding": "Owner acceptance remained dispersed across benchmark and screenshot pages",
+      "correction": "Reconfirmed pending states and explicit owner-only evidence requirements",
+      "targeted_validation": [
+        "acceptance checklist review"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 182,
+      "version": "1.1.228",
+      "severity": "release",
+      "finding": "Executable modes required revalidation after file generation",
+      "correction": "Restored executable bits for scripts and examples and verified the release inventory",
+      "targeted_validation": [
+        "entrypoint mode gate"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 183,
+      "version": "1.1.229",
+      "severity": "release",
+      "finding": "Text normalization required a final scan after generated JSON updates",
+      "correction": "Applied LF/final-newline normalization and repeated the independent text-quality gate",
+      "targeted_validation": [
+        "full text-quality scan"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 184,
+      "version": "1.1.230",
+      "severity": "release",
+      "finding": "JSON generation required a final parse of all records",
+      "correction": "Parsed every JSON document after matrix, assurance and ledger generation",
+      "targeted_validation": [
+        "recursive JSON parse"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 185,
+      "version": "1.1.231",
+      "severity": "release",
+      "finding": "The terminal archive needed dual deterministic builds",
+      "correction": "Built the package twice from the manifest and compared the resulting bytes",
+      "targeted_validation": [
+        "dual ZIP byte comparison"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 186,
+      "version": "1.1.232",
+      "severity": "release",
+      "finding": "The terminal archive needed safe-path and exact-root validation",
+      "correction": "Validated canonical paths, modes, timestamps, storage method and manifest inventory",
+      "targeted_validation": [
+        "safe ZIP validator"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 187,
+      "version": "1.1.233",
+      "severity": "release",
+      "finding": "The terminal archive needed a clean-extraction rerun",
+      "correction": "Executed the complete static verification inside a newly extracted directory",
+      "targeted_validation": [
+        "clean extraction verify_repo"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 188,
+      "version": "1.1.234",
+      "severity": "release",
+      "finding": "The outer checksum sidecar needed exact one-line grammar and basename",
+      "correction": "Generated and validated the exact SHA-256 sidecar",
+      "targeted_validation": [
+        "sidecar validator"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 189,
+      "version": "1.1.235",
+      "severity": "audit",
+      "finding": "Final severity accounting required explicit closure",
+      "correction": "Recorded zero unresolved critical and major static findings while retaining physical acceptance as pending",
+      "targeted_validation": [
+        "release assurance validation"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 190,
+      "version": "1.1.236",
+      "severity": "audit",
+      "finding": "The terminal verdict needed to distinguish static readiness from hardware proof",
+      "correction": "Marked static publication ready and physical M5 performance not measured",
+      "targeted_validation": [
+        "final audit scope review"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 191,
+      "version": "1.1.237",
+      "severity": "publication",
+      "finding": "The package handoff required standalone Russian installation and audit artifacts",
+      "correction": "Exported each Markdown document separately from the verified repository",
+      "targeted_validation": [
+        "artifact hash comparison"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 192,
+      "version": "1.1.238",
+      "severity": "publication",
+      "finding": "The package handoff required standalone machine-readable assurance artifacts",
+      "correction": "Exported matrix, ledger, evidence and assurance JSON records separately",
+      "targeted_validation": [
+        "artifact JSON parse"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 193,
+      "version": "1.1.239",
+      "severity": "major",
+      "finding": "The clean-extraction packaging path duplicated the complete long unit suite inside one bounded CI command and exceeded the available command window",
+      "correction": "Required the source unit suite once, retained exact manifest and safe ZIP identity proofs, and made the extracted tree repeat every static gate through an explicit --skip-unit-tests mode; the independent audit separately reran all 91 tests on the extraction",
+      "targeted_validation": [
+        "source 91-test closure",
+        "safe ZIP exact inventory",
+        "clean-extraction static gates",
+        "manual extracted 91-test closure"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    },
+    {
+      "sequence": 194,
+      "version": "1.1.240",
+      "severity": "release",
+      "finding": "The requested terminal version had not yet been emitted as a fully self-consistent handoff package",
+      "correction": "Synchronized all records, passed 91 isolated checks and 90 x 24 controls, regenerated the manifest, built byte-identical archives, validated the exact sidecar, repeated every static gate after clean extraction and independently reran all 91 tests on the extracted package",
+      "targeted_validation": [
+        "full source repository verification",
+        "2160-control matrix",
+        "dual deterministic ZIP comparison",
+        "safe ZIP inventory",
+        "clean-extraction static rerun",
+        "clean-extraction 91-test audit",
+        "exact sidecar"
+      ],
+      "critical_findings_remaining_after_revision": 0,
+      "major_findings_remaining_after_revision": 0
+    }
+  ],
+  "development_test_refinements": [
+    "The final release uses isolated bounded unittest process groups and no Python bytecode writes.",
+    "The matrix executes each full domain validator once, then rechecks one repository-state digest; it is not 2,160 independent reviews.",
+    "Physical LM Studio, Metal, thermal, memory-pressure and sustained-load measurements remain owner acceptance work."
+  ],
+  "summary": {
+    "revisions_recorded": 194,
+    "critical_findings_initial": 1,
+    "critical_findings_remaining": 0,
+    "major_findings_initial": 9,
+    "major_findings_remaining": 0,
+    "hardware_benchmarks_claimed": 0,
+    "terminal_static_controls": 2160,
+    "unit_tests_expected": 91
+  }
+}

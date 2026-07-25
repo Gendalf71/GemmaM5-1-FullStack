@@ -1,0 +1,36 @@
+{
+  "schema_version": 2,
+  "repository_version": "1.1.240",
+  "generated_utc": "2026-07-24T20:00:00Z",
+  "audit_mode": "clean-room static audit without owner GitHub access",
+  "input_release": "1.1.150",
+  "terminal_release": "1.1.240",
+  "unit_tests_expected": 91,
+  "revision_count": 194,
+  "external_source_count": 25,
+  "matrix": {
+    "outer_cycles": 90,
+    "domains_per_cycle": 24,
+    "total_control_passes": 2160,
+    "state_digest_sha256": "7e43b05960208d5f8a201a20a78300079dc0632fb4c69f094fabe8edc41d77b9"
+  },
+  "release_gates": [
+    "independent text quality",
+    "91 source unit checks",
+    "exact manifest",
+    "SHA-256 verification",
+    "dual deterministic ZIP build",
+    "safe ZIP inventory",
+    "clean-extraction static rerun",
+    "independent clean-extraction 91-test audit",
+    "exact sidecar"
+  ],
+  "critical_findings_initial": 1,
+  "critical_findings_remaining": 0,
+  "major_findings_initial": 9,
+  "major_findings_remaining": 0,
+  "hardware_benchmark_status": "not_measured",
+  "runtime_screenshot_status": "not_captured",
+  "owner_acceptance_required": true,
+  "scope_note": "Repeated automated and static controls are not independent human reviews and do not prove physical M5 performance."
+}

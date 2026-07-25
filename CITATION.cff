@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If this installation repository is useful, cite the repository release."
+title: "GemmaM5-1 FullStack"
+version: 1.1.240
+date-released: 2026-07-24
+authors:
+  - family-names: Dedenko
+    given-names: Grigoriy
+repository-code: "https://github.com/Gendalf71/GemmaM5-1-FullStack"
+license: MIT

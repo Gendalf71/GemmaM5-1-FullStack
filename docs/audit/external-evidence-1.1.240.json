@@ -1,0 +1,221 @@
+{
+  "schema_version": 3,
+  "repository_version": "1.1.240",
+  "retrieved_date": "2026-07-24",
+  "scope_note": "Primary-source URLs, immutable action pins and bounded claims used by the clean-room static audit. This record is not a vendored copy and does not make offline runtime or physical hardware-performance claims.",
+  "sources": [
+    {
+      "id": "google-gemma4-model-card",
+      "publisher": "Google DeepMind",
+      "url": "https://ai.google.dev/gemma/docs/core/model_card_4",
+      "claims": [
+        "Gemma 4 26B A4B has approximately 25.2B total and 3.8B active parameters",
+        "text-and-image input, text output and 256K architectural context"
+      ]
+    },
+    {
+      "id": "lmstudio-target-model",
+      "publisher": "LM Studio",
+      "url": "https://lmstudio.ai/models/google/gemma-4-26b-a4b-qat",
+      "claims": [
+        "exact catalog identity google/gemma-4-26b-a4b-qat",
+        "vision, tool-use and reasoning capability labels"
+      ]
+    },
+    {
+      "id": "lmstudio-gemma4-family",
+      "publisher": "LM Studio",
+      "url": "https://lmstudio.ai/models/gemma-4",
+      "claims": [
+        "Q4_0 package listed at 15.60 GB",
+        "Gemma 4 family catalog context"
+      ]
+    },
+    {
+      "id": "lmstudio-cli-get",
+      "publisher": "LM Studio",
+      "url": "https://lmstudio.ai/docs/cli/local-models/get",
+      "claims": [
+        "lms get model and variant selection"
+      ]
+    },
+    {
+      "id": "lmstudio-cli-load",
+      "publisher": "LM Studio",
+      "url": "https://lmstudio.ai/docs/cli/local-models/load",
+      "claims": [
+        "context length, GPU offload, identifier, TTL, parallel and estimate-only controls"
+      ]
+    },
+    {
+      "id": "lmstudio-cli-load-source",
+      "publisher": "LM Studio",
+      "url": "https://github.com/lmstudio-ai/lms/blob/71bd99ccf882a0410cfd574ee220a99083608930/src/subcommands/load.ts",
+      "claims": [
+        "pinned implementation evidence for hidden --exact and --local flags",
+        "implementation evidence also exposes --parallel and --estimate-only"
+      ]
+    },
+    {
+      "id": "lmstudio-cli-ls",
+      "publisher": "LM Studio",
+      "url": "https://lmstudio.ai/docs/cli/local-models/ls",
+      "claims": [
+        "local model inventory command"
+      ]
+    },
+    {
+      "id": "lmstudio-server-start",
+      "publisher": "LM Studio",
+      "url": "https://lmstudio.ai/docs/cli/serve/server-start",
+      "claims": [
+        "local server start and bind controls"
+      ]
+    },
+    {
+      "id": "lmstudio-server-status-source",
+      "publisher": "LM Studio",
+      "url": "https://github.com/lmstudio-ai/lms/blob/71bd99ccf882a0410cfd574ee220a99083608930/src/subcommands/server.ts",
+      "claims": [
+        "pinned implementation evidence that server status --json emits running and port"
+      ]
+    },
+    {
+      "id": "lmstudio-authentication",
+      "publisher": "LM Studio",
+      "url": "https://lmstudio.ai/docs/developer/core/authentication",
+      "claims": [
+        "API authentication is configurable and access tokens are supplied by the client"
+      ]
+    },
+    {
+      "id": "lmstudio-parallel-requests",
+      "publisher": "LM Studio",
+      "url": "https://lmstudio.ai/docs/app/advanced/parallel-requests",
+      "claims": [
+        "runtime may process parallel predictions; this profile constrains the loaded model to one prediction"
+      ]
+    },
+    {
+      "id": "lmstudio-rest-api",
+      "publisher": "LM Studio",
+      "url": "https://lmstudio.ai/docs/developer/rest",
+      "claims": [
+        "LM Studio exposes local REST and OpenAI-compatible interfaces"
+      ]
+    },
+    {
+      "id": "lmstudio-document-chat",
+      "publisher": "LM Studio",
+      "url": "https://lmstudio.ai/docs/app/basics/rag",
+      "claims": [
+        "document chat and retrieval are application features; this repository does not implement a general retrieval engine"
+      ]
+    },
+    {
+      "id": "apple-macbook-air-identification",
+      "publisher": "Apple",
+      "url": "https://support.apple.com/en-us/102869",
+      "claims": [
+        "MacBook Air M5 model identifiers are Mac17,3 and Mac17,4",
+        "M5 Air was introduced in 2026 and supports macOS Tahoe 26"
+      ]
+    },
+    {
+      "id": "apple-m5-air-13",
+      "publisher": "Apple",
+      "url": "https://support.apple.com/en-us/126320",
+      "claims": [
+        "13-inch MacBook Air M5 is configurable to 24GB or 32GB unified memory",
+        "M5 memory bandwidth is 153GB/s"
+      ]
+    },
+    {
+      "id": "apple-m5-air-15",
+      "publisher": "Apple",
+      "url": "https://support.apple.com/en-us/126321",
+      "claims": [
+        "15-inch MacBook Air M5 is configurable to 24GB or 32GB unified memory",
+        "M5 memory bandwidth is 153GB/s"
+      ]
+    },
+    {
+      "id": "github-host-fingerprints",
+      "publisher": "GitHub",
+      "url": "https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints",
+      "claims": [
+        "github.com Ed25519 fingerprint SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU"
+      ]
+    },
+    {
+      "id": "github-generate-ssh-key",
+      "publisher": "GitHub",
+      "url": "https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent",
+      "claims": [
+        "Ed25519 key generation and ssh-agent workflow"
+      ]
+    },
+    {
+      "id": "github-actions-checkout",
+      "publisher": "GitHub Actions",
+      "url": "https://github.com/actions/checkout/releases/tag/v7.0.1",
+      "immutable_commit": "3d3c42e5aac5ba805825da76410c181273ba90b1",
+      "claims": [
+        "official checkout v7.0.1 release published 2026-07-20",
+        "workflow pins the immutable release commit"
+      ]
+    },
+    {
+      "id": "github-actions-setup-python",
+      "publisher": "GitHub Actions",
+      "url": "https://github.com/actions/setup-python/releases/tag/v7.0.0",
+      "immutable_commit": "5fda3b95a4ea91299a34e894583c3862153e4b97",
+      "claims": [
+        "official setup-python v7.0.0 immutable release published 2026-07-20",
+        "workflow pins the immutable release commit"
+      ]
+    },
+    {
+      "id": "turbo-fieldfare-structural-reference",
+      "publisher": "drumih",
+      "url": "https://github.com/drumih/turbo-fieldfare",
+      "claims": [
+        "structural presentation reference only; no code, screenshots, measurements or runtime claims copied"
+      ]
+    },
+    {
+      "id": "lmstudio-0.4.11-changelog",
+      "publisher": "LM Studio",
+      "url": "https://lmstudio.ai/changelog/lmstudio-v0.4.11",
+      "claims": [
+        "minimum supported release boundary for updated Gemma 4 chat template"
+      ]
+    },
+    {
+      "id": "lmstudio-0.4.20-changelog",
+      "publisher": "LM Studio",
+      "url": "https://lmstudio.ai/changelog/lmstudio-v0.4.20",
+      "claims": [
+        "recommended LM Studio release for repository 1.1.240",
+        "release dated 2026-07-22"
+      ]
+    },
+    {
+      "id": "lmstudio-system-requirements",
+      "publisher": "LM Studio",
+      "url": "https://lmstudio.ai/docs/app/system-requirements",
+      "claims": [
+        "generic macOS page names Apple Silicon M1/M2/M3/M4 and macOS 14+",
+        "page does not independently establish M5 compatibility"
+      ]
+    },
+    {
+      "id": "github-immutable-actions",
+      "publisher": "GitHub Docs",
+      "url": "https://docs.github.com/en/actions/how-tos/create-and-publish-actions/using-immutable-releases-and-tags-to-manage-your-actions-releases",
+      "claims": [
+        "immutable releases provide unchangeable action packages"
+      ]
+    }
+  ]
+}

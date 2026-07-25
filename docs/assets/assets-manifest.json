@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "repository_version": "1.1.240",
+  "evidence_status": "illustrative_engineering_diagrams_not_runtime_screenshots",
+  "assets": [
+    {
+      "path": "docs/assets/banner.png",
+      "dimensions": [
+        1600,
+        600
+      ],
+      "minimum_blank_margin_px": 32,
+      "role": "readme_banner"
+    },
+    {
+      "path": "docs/assets/architecture.png",
+      "dimensions": [
+        1600,
+        900
+      ],
+      "minimum_blank_margin_px": 32,
+      "role": "functional_architecture"
+    },
+    {
+      "path": "docs/assets/installation_flow.png",
+      "dimensions": [
+        1700,
+        980
+      ],
+      "minimum_blank_margin_px": 24,
+      "role": "installation_sequence"
+    },
+    {
+      "path": "docs/assets/memory_budget.png",
+      "dimensions": [
+        1600,
+        900
+      ],
+      "minimum_blank_margin_px": 24,
+      "role": "illustrative_memory_budget"
+    }
+  ]
+}

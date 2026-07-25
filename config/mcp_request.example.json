@@ -1,0 +1,16 @@
+{
+  "model": "gemma4-local",
+  "input": "Find the most relevant public Gemma 4 model entry.",
+  "integrations": [
+    {
+      "type": "ephemeral_mcp",
+      "server_label": "huggingface",
+      "server_url": "https://huggingface.co/mcp",
+      "allowed_tools": [
+        "model_search"
+      ]
+    }
+  ],
+  "context_length": 8192,
+  "temperature": 1.0
+}
